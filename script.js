@@ -29,14 +29,22 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         attempts++;
         if(guess === targetNumber){
-            result.textContent = "🎉Congratulations! You guessed the number.";
+            result.textContent = "🎉Congratulations! You are the winner";
             
             result.style.fontWeight = "bold";
             result.style.color = "yellow";
+
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
         }else if(attempts === maxAttempts){
-            result.textContent = `Game Over! The number was ${targetNumber}.`;
+            result.textContent = `Game Over! The number was ${targetNumber} try again!!`;
             result.style.fontWeight = "460";
             result.style.color = "red";
+
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
            
         }else{
             result.textContent = guess < targetNumber ? "📉Too low!" : "📈Too high!";
@@ -47,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
             attemptsDisplay.style.fontWeight='bold';
         }
 
-       
+      
         guessInput.value = "";
         guessInput.focus();
     }
@@ -58,4 +66,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     
 })
+
+
     

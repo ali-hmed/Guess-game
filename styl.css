@@ -168,6 +168,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .p1 {
         color: #ffffff;
+        font-size: 14px;
     }
     h1 {
         font-size: 23px;
